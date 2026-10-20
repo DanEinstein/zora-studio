@@ -56,3 +56,15 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+
+# Design / prep (not required to run the app)
+stitch/
+plan.md
+zora_prd_and_technical_architecture.md
+Zora PRD and Technical Architecture.pdf
+*.pdf
+
+# Agent / tooling noise
+agent-tools/
+.cursor/
+*.canvas.tsx

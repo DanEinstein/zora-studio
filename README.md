@@ -7,12 +7,11 @@ Zora is a local developer studio that turns raw technical notes into ready-to-pu
 - **Model:** local Ollama (`gemma3:1b`) — no cloud inference or telemetry
 
 ```
-posts_toolset/
+zora-studio/
 ├── backend/          # FastAPI app (app.main:app)
 │   ├── app/
 │   └── requirements.txt
 ├── frontend/         # Vite + React studio UI
-├── stitch/           # Design reference (Stitch export)
 ├── .env.example      # Optional Ollama URL / model overrides
 └── README.md
 ```
@@ -36,8 +35,8 @@ Confirm it appears in `ollama list`.
 ## Clone / setup
 
 ```bash
-git clone <your-repo-url> posts_toolset
-cd posts_toolset
+git clone git@github.com:DanEinstein/zora-studio.git
+cd zora-studio
 ```
 
 Copy optional env defaults if you want to override Ollama settings:
