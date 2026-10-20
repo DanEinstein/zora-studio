@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    overscroll-behavior: none;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  html.dark,
+  #root {
+    background-color: theme('colors.background');
+    color: theme('colors.on-surface');
+    min-height: 100%;
+  }
+}
+
+@layer components {
+  .prose-zora {
+    @apply text-on-surface text-body-md font-body-md leading-relaxed;
+  }
+
+  .prose-zora h1,
+  .prose-zora h2,
+  .prose-zora h3 {
+    @apply font-headline-sm text-headline-sm text-on-surface font-bold mt-3 mb-2;
+  }
+
+  .prose-zora p {
+    @apply mb-3 text-on-surface-variant;
+  }
+
+  .prose-zora strong {
+    @apply text-on-surface font-semibold;
+  }
+
+  .prose-zora a,
+  .prose-zora .mention {
+    @apply text-secondary font-medium;
+  }
+
+  .prose-zora ul {
+    @apply space-y-2 list-none pl-1 mb-3;
+  }
+
+  .prose-zora ol {
+    @apply space-y-2 list-decimal pl-5 mb-3;
+  }
+
+  .prose-zora li {
+    @apply text-on-surface-variant;
+  }
+
+  .prose-zora code {
+    @apply px-1.5 py-0.5 bg-surface-container rounded font-code-md text-code-md text-primary;
+  }
+
+  .prose-zora pre {
+    @apply p-3.5 font-code-md text-code-md text-on-surface overflow-x-auto leading-relaxed bg-surface-container-lowest rounded-lg border border-outline-variant/30 my-3;
+  }
+
+  .prose-zora pre code {
+    @apply bg-transparent p-0 text-on-surface;
+  }
+}
